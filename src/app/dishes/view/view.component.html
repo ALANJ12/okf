@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink><h2 class=" text-light text-center"> <i class="fa-solid fa-utensils"></i> &nbsp;Aiwaaah!</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item me-5"><input  type="text" placeholder="search your recipies" class="form-control"></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="products/wish-list">YOUR RECIPE</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="products/wish-list">JUST IN RECIPIES</a></li>
+                
+               
+        </ul>
+        <form class="d-flex">
+            <a routerLink="dishes/view" class="btn btn-outline-light" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+                Saved
+                <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+            </a>
+        </form>
+        </div>
+        
+    </div>
+</nav>
+
+
+<!-- <div class="center">  -->
+    <div  *ngFor="let dishes of viewitems " >
+       
+
+- <div class="context">
+    <h1>{{dishes.Name}}</h1>
+    <br><br>
+     <h4>Ingredients:{{dishes.Ingredients}}</h4>
+     <br><br>
+     <h4>Method:{{dishes.Method}}</h4>
+    
+  </div>
+ 
+  
+  
+  <div class="area" >
+              <ul class="circles">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+              </ul>
+                
+              </div >
+
+              <button (click)="removeall()">home</button>
+
+
+
+
+ 

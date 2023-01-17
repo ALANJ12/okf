@@ -1,0 +1,98 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" routerLink><h2 class=" text-light text-center"> <i class="fa-solid fa-utensils"></i> &nbsp;Aiwaaah!</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li class="nav-item me-5"><input  (keyup)="search( $event)"type="text" placeholder="search your recipies" class="form-control"></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="products/wish-list">YOUR RECIPE</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="products/wish-list">JUST IN RECIPIES</a></li>
+              
+             
+      </ul>
+      <form class="d-flex">
+          <a routerLink="dishes/view" class="btn btn-outline-light" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Saved
+              <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+          </a>
+      </form>
+      </div>
+      
+  </div>
+</nav>
+
+   
+    
+       
+        <!-- <div class="container px-4 px-lg-5 mt-5"> -->
+         
+            <div class="row gx-2 gx-lg-0 row-cols-2 row-cols-md-2 row-cols-xl-6 ">
+              <div *ngFor="let dishes of alldishes|filter:searchterm:'Name'"  >
+             
+             
+
+    <div class="center">
+    
+
+
+
+   
+  
+        <div class="glass-card-grid">
+          <article class="glass-card">
+            <h3 class="glass-card-title">
+              <a href="#">  {{ dishes.Name}} </a>
+            </h3>
+            <div class="tags">
+              <a href="#" rel="tag">tag 1</a>
+              <a href="#" rel="tag">tag 2</a>
+            </div>
+            <p>
+           {{dishes.Description}}
+            </p>
+           
+            <div class="author-row">
+              <a class="author-name" href="#"> {{dishes.Author}} </a>
+            </div>
+            <br>
+            
+
+            <button (click)="addview(dishes)"  class="btn btn-primary btn-sm" routerLink="" >View</button>
+      
+            
+        
+          </article>
+      
+
+            
+            
+
+           
+
+       
+<!-- <div  *ngFor="let dishes of viewitems">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div  class="modal-body">
+        MYREEEE
+       {{dishes.Name}}
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div> -->
+   
+  
+
+
+            
+            
