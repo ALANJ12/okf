@@ -1,4 +1,4 @@
-import { Component, OnInit,   } from '@angular/core';
+import { Component, OnInit, Pipe,   } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -17,31 +17,42 @@ import { ViewService } from '../../view.service';
   styleUrls: ['./dashboard.component.scss']
 })
 
+  
 
 export class DashboardComponent implements OnInit {
 
+  USER = ""
+
 
   alldishes: any = [];
-  searchterm: string = '';
- 
+
+  viewitems: any;
+  searchterm: string = ''
+  term: any;
+  Name: any;
 
 
 
 
-
-  
-
-  constructor(private api: ApiService, private router: Router, private view: ViewService,) { }
+  constructor(private api: ApiService, private router: Router, private view: ViewService,) {
+    if (localStorage.getItem('currentUser')) {
+      this.USER = JSON.parse(localStorage.getItem('currentUser') || '');
+    }
+  }
   
   ngOnInit(): void {
+    if (!localStorage.getItem('currentUser')) {
+      alert("please login first");
+      this.router.navigateByUrl('');
+    }
     this.api.getdishes().subscribe((data: any) => {
+    
+    
+    
       this.alldishes = data.dishes
     })
-    this.api.searchkey.subscribe((data: any) => {
-      this.searchterm=data
-    })
-   
-  
+    
+    
     
     // this.view.viewlist.subscribe(
     //   (data: any) => {
@@ -49,29 +60,51 @@ export class DashboardComponent implements OnInit {
     //     this.viewitems=data;
         
     //   })
-    
-    // this.api.searchkey.subscribe((data: any) => {
-    //   this.searchterm = data
-    // })
+ 
    
   }
+ 
+     
+  
+
 
 
   addview(dishes: any) {
+    this.view.removeall()
     this.view.addview(dishes)
   
     this.router.navigateByUrl('view')
+  
+    // this.router.navigateByUrl('dashboard')
+    
+    
+    
+    
     
   }
-  search(event: any) {
-    let searchkey = event.target.value
-    this.api.searchkey.next(searchkey)
+  logout() {
+    localStorage.removeItem('currentUser');
+   
+    this.router.navigateByUrl('')
+
   }
+}
+
+   
+
+
+
+  // save(dishes: any) {
+  //   this.view.save(dishes)
+  
+  // alert("saved sucessfully")
+    
+  
 
  
 
-  }
-   
+  
+  
     
 
 

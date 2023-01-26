@@ -43,7 +43,7 @@ export class SigninComponent implements OnInit {
       this.ds.signin(email, username, password)
         .subscribe((result: any) => {
           alert(result.message);
-          this.router.navigateByUrl('')
+          this.router.navigateByUrl('login')
         },
                    result => {
             alert(result.error.message)

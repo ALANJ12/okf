@@ -1,4 +1,4 @@
-
+<!-- 
 <br>
 <br>
 <div class="container">
@@ -36,4 +36,63 @@
             
             
 
-</div>
+</div> -->
+<!-- <div class="body"> -->
+
+<div class="container">
+    <div class="body">
+  
+	<div class="screen">
+       
+		<div class="screen__content">
+         
+            <form [formGroup]="registerForm"  class="login">
+			
+				<div class="login__field">
+                    <img src="../../assets/restaurant-service-abstract-logo-template-symbol-icon-free-vector.jpg"  alt="" srcset="">
+                    <h1>Aiwaaah...</h1><br>
+					<!-- <i class="login__icon fas fa-user"></i> -->
+                    <input type="email" formControlName="uname" class="login__input" id="user" placeholder="User name">
+                    <br>
+                    
+                    <div  *ngIf="this.registerForm.get('uname')?.errors &&this.registerForm.get('uname')?.touched" style="color:red">Invalid username</div>
+				</div>
+				<div class="login__field">
+					<!-- <i class="login__icon fas fa-lock"></i> -->
+                    <input type="email" formControlName="email" class="login__input" id="acc" placeholder="email id">
+                    <br>
+                    <div  *ngIf="this.registerForm.get('email')?.errors &&this.registerForm.get('email')?.touched" style="color:red">Invalid email id</div>
+				</div>
+                <div class="login__field">
+                   
+					<!-- <i class="login__icon fas fa-lock"></i> -->
+					
+                    <br> <input type="password" formControlName="pswd" class="login__input" id="password" placeholder="password">
+                    <div  *ngIf="this.registerForm.get('pswd')?.errors &&this.registerForm.get('pswd')?.touched" style="color:red">Invalid password</div>
+                    <br></div>
+				<button class="button login__submit"  (click)="signin()" >
+					<span class="button__text">Register</span>
+					<!-- <i class="button__icon fas fa-chevron-right"></i> -->
+				</button><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="login" >Login</a> 
+            	</form>	
+                    	
+		
+		
+            
+            <!-- </form> -->
+		</div>
+
+
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div></div>
+
+
+
+

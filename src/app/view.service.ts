@@ -6,7 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ViewService {
   viewarray: any = [];
+  savearray: any = [];
   viewlist = new BehaviorSubject([])
+  savelist = new BehaviorSubject([])
 
   constructor() { }
 
@@ -14,15 +16,27 @@ export class ViewService {
   addview(dishes: any) {
     this.viewarray.push(dishes);
     this.viewlist.next(this.viewarray)
-    console.log(this.viewlist);
+
+    // console.log(this.viewlist);
+    
    
    
     
     
+  }
+  
+  save(dishes: any) {
+    this.savearray.push(dishes);
+    this.savelist.next(this.savearray)
+    // console.log(this.savelist);
   }
   removeall() {
     this.viewarray = [];
     this.viewlist.next(this.viewarray)
   
   }
+  clear() {
+    window.location.reload
+   
+}
 }

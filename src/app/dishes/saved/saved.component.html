@@ -1,0 +1,135 @@
+<!-- <p>saved works!</p>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink><h2 class=" text-light text-center"> <i class="fa-solid fa-utensils"></i> &nbsp;Aiwaaah!</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item me-5"><input type="text" placeholder="search your recipies" class="form-control"></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/recipie">YOUR RECIPE</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="products/wish-list">JUST IN RECIPIES</a></li>
+                
+               
+        </ul>
+        <form class="d-flex">
+            <a routerLink="dishes/view" class="btn btn-outline-light" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+                Saved
+                <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+            </a>
+        </form>
+        </div>
+        
+    </div>
+  </nav> -->
+  
+     
+      
+         
+          <!-- <div class="container px-4 px-lg-5 mt-5"> -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  
+              <div class="container px-4 px-lg-6">
+                  <div><h2 class=" text-danger" >Welcome {{USER}}</h2> </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <a class="navbar-brand" ><h2 class=" text-light text-center"> <i class="fa-solid fa-utensils"></i> &nbsp;Aiwaaah!</h2></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                          
+                          <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/recipie">YOUR RECIPE</a></li> -->
+                          <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/saved">JUST IN RECIPIES</a></li> -->
+                          
+                         
+                  </ul>  &nbsp;&nbsp; 
+                  <form class="d-flex">
+                      <a routerLink="/dashboard" class="btn btn-outline-light" type="submit">
+                          <i class="bi-cart-fill me-1"></i>
+                         Home
+                          <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+                      </a>
+                  </form>&nbsp;&nbsp;&nbsp;&nbsp; 
+                  <form class="d-flex">
+                    <a routerLink="/recipie" class="btn btn-outline-light" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Create
+                        <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+                    </a>
+                </form>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                  <form class="d-flex">
+                    <a routerLink="/saved" class="btn btn-outline-light" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Favourites
+                        <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+                    </a>
+                </form>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <form class="d-flex">
+                      <a routerLink="/request" class="btn btn-outline-light" type="submit">
+                          <i class="bi-cart-fill me-1"></i>
+                         Request
+                          <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+                      </a>
+                  </form>
+                  &nbsp;&nbsp;   &nbsp;&nbsp;
+                  <form class="d-flex">
+                    <a routerLink="/chat" class="btn btn-outline-light" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Discuss
+                        <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+                    </a>
+                </form>  &nbsp;&nbsp; 
+                
+             
+                  </div>
+                  </div>
+                  
+             
+            </nav>
+            
+            
+           
+              <div class="row gx-2 gx-lg-0 row-cols-2 row-cols-md-2 row-cols-xl-4 ">
+                <div  *ngFor="let dishes of saveitems " >
+          
+               
+               
+  
+      <div class="center">
+      
+  
+  
+  
+     
+    
+          <div class="glass-card-grid">
+            <article class="glass-card">
+              <h3 class="glass-card-title">
+                <a href="#"> {{dishes.Name}} </a>
+              </h3>
+           
+              <p>
+            {{dishes.Description}}
+              </p>
+             
+              <div class="author-row">
+                <a class="author-name" href="#"> </a>
+              </div>
+              <!-- <button (click)="addview(dishes)"  class="btn btn-primary btn-sm" routerLink="/view" >View</button> -->
+              <br>
+            </article></div>
+          
+           
+      </div></div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+              
+  
+             
+        
+              
+          
+           
+        

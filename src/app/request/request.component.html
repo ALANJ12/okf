@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   
     <div class="container px-4 px-lg-6">
@@ -14,16 +13,16 @@
                
         </ul>  &nbsp;&nbsp; 
         <form class="d-flex">
-          <a routerLink="/dashboard" class="btn btn-outline-light" type="submit">
-              <i class="bi-cart-fill me-1"></i>
-             Home
-              <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
-          </a>
-      </form>&nbsp;&nbsp;&nbsp;&nbsp; 
+            <a routerLink="/dashboard" class="btn btn-outline-light" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+               Home
+                <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+            </a>
+        </form>&nbsp;&nbsp;&nbsp;&nbsp; 
         <form class="d-flex">
           <a routerLink="/recipie" class="btn btn-outline-light" type="submit">
               <i class="bi-cart-fill me-1"></i>
-              Create
+            Create
               <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
           </a>
       </form>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,59 +49,39 @@
               <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
           </a>
       </form>  &nbsp;&nbsp;  
- 
+     
         </div>
         </div>
         
    
-  </nav>
-
-<!-- <div class="center">  -->
-    <div  *ngFor="let dishes of viewitems " >
-       
-
-<div class="context">
-    <h1>{{dishes.Name}}</h1>
-    <br><br>
-     <h4>Ingredients:{{dishes.Ingredients}}</h4>
-     <br><br>
-     <h4>Method:{{dishes.Method}}</h4><br><br>
-    
-    
-  </div>
- 
+  </nav><br><br>
+  <div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card px-1 py-4">
+        <div class="card-body">
+            <h6 class="card-title mb-3">Hey {{USER}} </h6>
+            <!-- <div class="d-flex flex-row"> <label class="radio mr-1"> <input type="radio" name="add" value="anz" checked> <span> <i class="fa fa-user"></i> Anz CMK </span> </label> <label class="radio"> <input type="radio" name="add" value="add"> <span> <i class="fa fa-plus-circle"></i> Add </span> </label> </div> -->
+            <h6 class="information mt-4">Please fill the following fields &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;    &nbsp;    &nbsp;  &nbsp;    &nbsp;    &nbsp; &nbsp;    &nbsp;    &nbsp;                </h6>
+           
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <input  [(ngModel)]=dishname class="form-control" type="text" placeholder="Dish name"> </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <textarea class="form-control"  [(ngModel)]=suggestion placeholder="suggestions" rows="3"></textarea> </div>
+                    </div>
+                </div>
+            </div><br>
+            <button  (click)="req()" class="btn btn-primary btn-block confirm-button">Submit</button>
+        </div>
+    </div>
+</div>
   
-  
-  <!-- <div class="area" >
-              <ul class="circles">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-              </ul>
-                
-              </div > -->
-              <!-- <button (click)="removeall()">home</button> -->
-          
-              <button type="button" (click)="save(dishes)" class="btn btn-primary">Save</button></div>
-              <br><br>  <br><br>
-              <br><br>
-              <br><br>
-              <br><br>  <br><br>
-              <br><br>
-              <br><br>
 
-
-             
-             
-
-
-
-
- 
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

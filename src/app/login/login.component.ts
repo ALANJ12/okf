@@ -53,15 +53,17 @@ export class LoginComponent implements OnInit {
         .subscribe((result: any) => {
           localStorage.setItem('currentUser', JSON.stringify(result.currentUser))
           localStorage.setItem('currentemail', JSON.stringify(result.currentemail))
-          localStorage.setItem('token',JSON.stringify(result.token))
+          localStorage.setItem('token', JSON.stringify(result.token))
           alert(result.message);
           this.router.navigateByUrl('dashboard')
         },
-                   result => {
+          result => {
             alert(result.error.message)
           })
 
 
-  }
+    }
+  
+  
   }
 }

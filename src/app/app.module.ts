@@ -13,7 +13,16 @@ import { DishesModule } from './dishes/dishes.module';
 
 import { ViewComponent } from './dishes/view/view.component';
 
-import { RecipieComponent } from './dishes/recipie/recipie.component';
+import { RecipieComponent } from './recipie/recipie.component';
+
+import { SavedComponent } from './dishes/saved/saved.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ChatComponent } from './chat/chat.component';
+import { RequestComponent } from './request/request.component';
+import { FooterComponent } from './footer/footer.component';
+
+
+
 
 
 
@@ -28,6 +37,17 @@ import { RecipieComponent } from './dishes/recipie/recipie.component';
     AppComponent,
     SigninComponent,
     LoginComponent,
+    
+  
+    RecipieComponent,
+
+    DashboardComponent,
+    ChatComponent,
+     RequestComponent,
+     FooterComponent,
+   
+ 
+   
     
     
     
@@ -54,7 +74,8 @@ import { RecipieComponent } from './dishes/recipie/recipie.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    DishesModule
+    DishesModule,
+    Ng2SearchPipeModule
    
  
    

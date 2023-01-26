@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: linear-gradient(270deg, #5D54A4, #6A679E)
+}
+
+
+body{
+    font-family: 'East Sea Dokdo', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=East+Sea+Dokdo&family=Poppins:ital,wght@0,100;1,100&family=Shrikhand&family=Sofia+Sans:wght@200&family=Yeon+Sung&display=swap');

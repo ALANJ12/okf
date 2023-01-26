@@ -10,10 +10,21 @@ const options = {
 
 export class DataService {
   currentUser = ""
-  currentemail = ""
+  USER
+
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    if (localStorage.getItem('currentUser')) {
+      this.USER = JSON.parse(localStorage.getItem('currentUser') || '');
+      if (localStorage.getItem('currentemail')) {
+        this.USER = JSON.parse(localStorage.getItem('currentUser') || '');
+   
+      }
+    }
+  }
+  
+
   signin(email: any, username: any, pswd: any) {
     const data = {
       email,
@@ -38,14 +49,48 @@ export class DataService {
     }
     return options
   }
-  // my(Name: any, Description: any, Author: any,Ingredients:any,Method:any) {
-  //   const data = {
-  //     Name,
-  //     Description,
-  //     Author,
-  //     Ingredients,
-  //     Method
+  my(Name: any, Description: any, Author: any, Ingredients: any, Method: any) {
+    const data = {
+      Name,
+      Description,
+      Author,
+      Ingredients,
+      Method
+    }
+    return this.http.post('http://localhost:3000/my', data)
+  }
+
+  req(dishname: any, suggestion:any,b:any) {
+    const data = {
+      dishname,
+      suggestion,
+     b
+    }
+    return this.http.post('http://localhost:3000/req', data)
+  }
+  ok(talk:any,a:any) {
+    const data = {
+      talk,
+      a
+    }
+    return this.http.post('http://localhost:3000/ok', data)
+  }
+    save(FF:any,GG:any,a:any) {
+      const data = {
+        FF,
+        GG,
+        a
+      
+      }
+      return this.http.post('http://localhost:3000/save',data)
+    }
+  //   gettransaction(FF:any) {  const data = {
+  //     FF,
+   
   //   }
-  //   return this.http.post('http://localhost:3000/my', data)
-  // }
+  //   return this.http.post('http://localhost:3000/transaction',data,this.gettoken())
+  //   }
+  
+
+  // }}
 }

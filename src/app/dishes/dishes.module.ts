@@ -7,8 +7,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewComponent } from './view/view.component';
 
-import { RecipieComponent } from './recipie/recipie.component';
-import { FilterPipe } from './pipes/filter.pipe';
+import { RecipieComponent } from '../recipie/recipie.component';
+
+import { SavedComponent } from './saved/saved.component';
+
+
 
 
 
@@ -18,10 +21,17 @@ import { FilterPipe } from './pipes/filter.pipe';
     DishesComponent,
    
     ViewComponent,
+    SavedComponent,
+    
+    
+
    
-    RecipieComponent,
-    DashboardComponent,
-    FilterPipe,
+   
+ 
+   
+   
+  
+
    
    
    

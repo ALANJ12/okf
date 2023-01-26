@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  
+    <div class="container px-4 px-lg-6">
+        <div><h2 class=" text-danger" >Welcome {{USER}}</h2> </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a class="navbar-brand" ><h2 class=" text-light text-center"> <i class="fa-solid fa-utensils"></i> &nbsp;Aiwaaah!</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                
+                <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/recipie">YOUR RECIPE</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/saved">JUST IN RECIPIES</a></li> -->
+                
+               
+        </ul>  &nbsp;&nbsp; 
+        <form class="d-flex">
+            <a routerLink="/dashboard" class="btn btn-outline-light" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+               Home
+                <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+            </a>
+        </form>&nbsp;&nbsp;&nbsp;&nbsp; 
+        <form class="d-flex">
+          <a routerLink="/recipie" class="btn btn-outline-light" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Create
+              <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+          </a>
+      </form>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        <form class="d-flex">
+          <a routerLink="/saved" class="btn btn-outline-light" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Favourites
+              <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+          </a>
+      </form>&nbsp;&nbsp;&nbsp;&nbsp;
+        <form class="d-flex">
+            <a routerLink="/request" class="btn btn-outline-light" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+               Request
+                <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+            </a>
+        </form>
+        &nbsp;&nbsp;   &nbsp;&nbsp;
+        <form class="d-flex">
+          <a routerLink="/chat" class="btn btn-outline-light" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Discuss
+              <span class="badge bg-light text-dark  ms-1 rounded-pill"></span>
+          </a>
+      </form>  &nbsp;&nbsp; 
+      
+   
+        </div>
+        </div>
+        
+   
+  </nav>
+
+  <div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card px-1 py-4">
+        <div class="card-body">
+            <h6 class="card-title mb-3">Hey {{USER}} </h6>
+            <!-- <div class="d-flex flex-row"> <label class="radio mr-1"> <input type="radio" name="add" value="anz" checked> <span> <i class="fa fa-user"></i> Anz CMK </span> </label> <label class="radio"> <input type="radio" name="add" value="add"> <span> <i class="fa fa-plus-circle"></i> Add </span> </label> </div> -->
+            <h6 class="information mt-4">Please tell us about your recipie &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;    &nbsp;  &nbsp;    &nbsp;    &nbsp; &nbsp;    &nbsp;    &nbsp;                </h6>
+           
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <input  [(ngModel)]=Name class="form-control" type="text" placeholder="Dish name"> </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <textarea class="form-control"  [(ngModel)]=Description placeholder="description" rows="3"></textarea> </div>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                      <div class="input-group"> <input  [(ngModel)]=Author class="form-control" type="text" placeholder="Author"> </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group"> <textarea class="form-control"  [(ngModel)]=Method placeholder="Method" rows="3"></textarea> </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="form-group">
+                  <div class="input-group"> <textarea class="form-control"  [(ngModel)]=Ingredients placeholder="Ingredients" rows="3"></textarea> </div>
+              </div>
+          </div>
+      </div><br>
+            <button  (click)="my()" class="btn btn-primary btn-block confirm-button">Submit</button>
+        </div>
+    </div>
+</div>
+
+   
+
+<!-- <h1>MY RECIPIE</h1>
+<input [(ngModel)]=Name type="text" placeholder="Name">
+<br>
+<br>
+
+<input [(ngModel)]=Description type="text" placeholder="Description">
+<br>
+<br>
+
+<input [(ngModel)]=Author type="text" placeholder="Author">
+<br>
+<br>
+
+<input [(ngModel)]=Method type="text" placeholder="Method">
+<br>
+<br>
+
+<input [(ngModel)]=Ingredients type="text" placeholder="Ingredients">
+<br>
+<br>
+
+<button (click)="my()">SUBMIT</button> -->
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
